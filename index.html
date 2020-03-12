@@ -2,11 +2,59 @@
 
 <html>
     <head>
-        <title>Mint Clone Project</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Social Network</title>
+        <link rel="stylesheet" href="style/style.css">
         <script src="https://kit.fontawesome.com/8e996abce9.js"></script>
     </head>
     <body>
-        
+        <header class="header">
+            <nav class="header__nav">
+                <a href="#"><i class="fas fa-bars"></i></a>
+                <h1>Swip<span>ex</span></h1>
+                <a href="#"><i class="far fa-bell"></i></a>
+            </nav>
+            <div class="header__tape">
+                <div class="header__tape__recent">
+
+                </div>
+                <div class="header__tape__future">
+
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="pool">
+                <div class="pool__profile">
+                    <div class="pool__profile__gallery">
+                        <img class="pool__profile__gallery__photo" src="img/" alt="Photo">
+                        <ul class="pool__profile__gallery__bullets">
+                            <li><i class="far fa-circle"></i></li>
+                            <li class="active"><i class="far fa-circle"></i></li>
+                            <li><i class="far fa-circle"></i></li>
+                            <li><i class="far fa-circle"></i></li>
+                        </ul>
+                    </div>
+
+                    <div class="pool__profile__info">
+                        <div class="pool__profile__info__details">
+                            <h2>Sebastian Gil</h2>
+                            <p>Bogotá, Colombia</p>
+                        </div>
+                        <button class="pool__profile__info__details__add"><i class="fas fa-user-plus"></i></button>
+                        <a class="pool__profile__info__details__more" href="#">Learn more</a>
+                    </div>
+                </div>
+                <div class="pool__actions">
+                    <a class="pool__actions__btn" href="#"><i class="fas fa-heart"></i></a>
+                    <a class="pool__actions__btn" href="#"><i class="fas fa-gift"></i></a>
+                    <a class="pool__actions__btn" href="#"><i class="fas fa-times"></i></a>
+                </div>
+            </section>
+
+            <nav class="bottom-nav">
+                <a class="bottom-nav__btn" href="#"><i class="fas fa-user"></i></a>
+                <a class="bottom-nav__btn" href="#"><i class="fas fa-inbox"></i></a>
+            </nav>
+        </main>
     </body>
 </html>
