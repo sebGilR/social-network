@@ -130,6 +130,24 @@ a:hover {
   color: #f0916e;
 }
 
+.profile__gallery__bullets {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 9px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.profile__gallery__bullets li {
+  margin-bottom: 5px;
+}
+
+.profile__gallery__bullets .active {
+  color: #4e50b8;
+}
+
 .tape {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,22 +235,6 @@ a:hover {
      object-fit: cover;
 }
 
-.pool__profile__gallery__bullets {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #414464;
-  font-size: 9px;
-}
-
-.pool__profile__gallery__bullets li {
-  margin-bottom: 3px;
-}
-
-.pool__profile__gallery__bullets .active {
-  color: #4e50b8;
-}
-
 .pool__profile__info {
   position: absolute;
   bottom: 0;
@@ -281,5 +283,173 @@ a:hover {
   -webkit-box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.1);
   background: white;
+}
+
+.main--profile {
+  left: 0;
+  width: 100%;
+  padding: 0 5%;
+  height: auto;
+}
+
+.go-back {
+  position: absolute;
+  left: 10px;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.profile {
+  position: relative;
+}
+
+.profile__gallery {
+  margin-left: -5.5%;
+  margin-right: -5.5%;
+  height: 95vw;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.profile__gallery__photo {
+  width: 100%;
+  height: 95vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 9px 9px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.profile__gallery__actions {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+.profile__gallery__actions__prev, .profile__gallery__actions__next {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 9px;
+  background-color: white;
+  color: lightgray;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile__gallery__actions__pass, .profile__gallery__actions__like {
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 9px;
+  font-size: 1.3em;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.profile__gallery__actions__pass {
+  background-color: #f0916e;
+}
+
+.profile__gallery__actions__pass:hover {
+  color: #4e50b8;
+}
+
+.profile__gallery__actions__like {
+  background-color: #4e50b8;
+}
+
+.profile__gallery__actions__like:hover {
+  color: #f0916e;
+}
+
+.profile__info__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.profile__info__header h1 {
+  font-size: 1.4em;
+}
+
+.profile__info__header a {
+  font-size: 1.9em;
+}
+
+.profile__info__label {
+  display: block;
+  margin-top: 15px;
+  color: #bebebe;
+  font-size: 0.9rem;
+}
+
+.profile__info__content {
+  display: block;
+  margin: 5px 0;
+}
+
+.profile__communicate {
+  padding: 15px 0;
+  margin: 15px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.profile__communicate:before, .profile__communicate:after {
+  content: " ";
+  display: table;
+}
+
+.profile__communicate:after {
+  clear: both;
+}
+
+.profile__communicate__gift {
+  font-size: 5rem;
+  margin-right: 15px;
+  float: left;
+}
+
+.profile__communicate__text {
+  padding-top: 15px;
+}
+
+.profile__communicate__text h2 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.profile__communicate__text p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.profile__communicate a {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */
