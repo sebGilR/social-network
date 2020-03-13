@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <title>Home | Social Network</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style/style.css">
         <script src="https://kit.fontawesome.com/8e996abce9.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header class="header">
-            <nav class="header__nav">
-                <a class="header__nav__left" href="#"><i class="fas fa-bars"></i></a>
-                <h1 class="header__nav__title--brand">Swip<span>ex</span></h1>
-                <a class="header__nav__right" href="#"><i class="far fa-bell"></i></a>
-            </nav>
-            <div class="header__tape">
-                <div class="header__tape__recent">
-                    
-                </div>
-                <div class="header__tape__future">
-
+        <nav class="nav">
+            <a class="nav__left" href="#"><i class="fas fa-bars"></i></a>
+            <h1 class="nav__title--brand">Swip<span>ex</span></h1>
+            <a class="nav__right" href="#"><i class="far fa-bell"></i></a>
+        </nav>
+        <div class="tape">
+            <div class="tape__recent">
+                <div class="tape__recent__person tape__person">
+                    <img class="tape__person__pic" src="img/" alt="person">
+                    <span class="tape__person__name"></span>
                 </div>
             </div>
-        </header>
+            <div class="tape__future">
+                <div class="tape__person">
+                    <img class="tape__person__pic" src="img/" alt="person">
+                </div>
+            </div>
+        </div>
         <main class="main">
             <section class="pool">
                 <div class="pool__profile">
