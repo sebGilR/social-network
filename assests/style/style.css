@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Start of reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -67,12 +68,35 @@ body, html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: gray;
+  color: #414464;
 }
 
 main {
   width: 90%;
+  height: calc(100% - 55px);
   margin: 0 auto;
+  position: absolute;
+  left: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.online {
+  display: inline-block;
+}
+
+.online:after {
+  font-weight: bold;
+  content: " •";
+  color: #62c762;
 }
 
 .nav {
@@ -110,13 +134,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-right: 7px;
+  border-right: 9px;
 }
 
 .tape__recent__person {
   margin-left: -10px;
   padding-right: 10px;
   border-right: 1px solid lightgray;
+  position: relative;
 }
 
 .tape__future {
@@ -148,6 +173,15 @@ main {
   padding: 0 10px;
 }
 
+.tape__person__choice {
+  position: absolute;
+  right: 3px;
+  top: 20%;
+  background-color: white;
+  border-radius: 50%;
+  color: #4e50b8;
+}
+
 .tape__person__pic {
   width: 50px;
   height: 50px;
@@ -157,17 +191,82 @@ main {
 }
 
 .pool {
+  width: 100%;
   position: absolute;
-  top: 128px;
+  top: 56px;
+  bottom: 60px;
+}
+
+.pool__profile {
+  height: 100%;
+}
+
+.pool__profile__gallery {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .pool__profile__gallery__photo {
+  position: absolute;
   width: 100%;
+  height: calc(100% - 119px);
+  border-radius: 9px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pool__profile__gallery__bullets {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #414464;
+  font-size: 9px;
+}
+
+.pool__profile__gallery__bullets li {
+  margin-bottom: 3px;
+}
+
+.pool__profile__gallery__bullets .active {
+  color: #4e50b8;
+}
+
+.pool__profile__info {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding: 10px;
+  left: 5%;
+  line-height: 1.6rem;
+  border-radius: 0 0 9px 9px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pool__profile__info__details h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.pool__profile__info__details__add {
+  float: right;
+  font-size: 2em;
+  color: #f0916e;
+}
+
+.pool__profile__info__details__more {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid lightgray;
 }
 
 .bottom-nav {
   position: fixed;
   bottom: 0;
+  left: 0;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;

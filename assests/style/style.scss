@@ -68,7 +68,7 @@ $padding2: 10px;
 $padding3: 15px;
 $margin: 10px;
 $br1: 4px;
-$br2: 7px;
+$br2: 9px;
 
 $tablet: 768px;
 $desktop: 1024px;
@@ -113,12 +113,35 @@ body, html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: gray;
+    color: color(cgray);
 }
 
 main {
     width: 90%;
+    height: calc(100% - 55px);
     @include center-x;
+    position: absolute;
+    left: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: inherit;
+        color: inherit;
+    }
+}
+
+.online {
+    display: inline-block;
+
+    &:after {
+        font-weight: bold;
+        content: " •";
+        color: rgb(98, 199, 98);
+    }
 }
 
 .nav {
@@ -155,6 +178,7 @@ main {
             margin-left: -$padding2;
             padding-right: $padding2;
             border-right: 1px solid lightgray;
+            position: relative;
         }
     }
 
@@ -185,7 +209,14 @@ main {
         height: 50px;
         padding: 0 $padding2;
 
-        
+        &__choice {
+            position: absolute;
+            right: 3px;
+            top: 20%;
+            background-color: white;
+            border-radius: 50%;
+            color: color(cpurple);
+        }
     }
 
     &__person__pic {
@@ -197,17 +228,83 @@ main {
 }
 
 .pool {
-    position: absolute;
-    top: 128px;
-}
-
-.pool__profile__gallery__photo {
     width: 100%;
+    position: absolute;
+    top: 56px;
+    bottom: 60px;
+
+    &__profile {
+        height: 100%;
+
+        &__gallery {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+
+            &__photo {
+                position: absolute;
+                width: 100%;
+                height: calc(100% - 119px);
+                border-radius: $br2;
+                object-fit: cover;
+            }
+
+            &__bullets {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: color(cgray);
+                font-size: 9px;
+                
+                li {
+                    margin-bottom: 3px;
+                }
+
+                .active {
+                    color: color(cpurple);
+                }
+            }
+        }
+
+        &__info {
+            position: absolute;
+            bottom: 0;
+            width: 90%;
+            padding: $padding2;
+            left: 5%;
+            line-height: 1.6rem;
+            border-radius: 0 0 $br2 $br2;
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+            
+
+            &__details {
+                h2 {
+                    font-size: 1.4em;
+                    font-weight: bold;
+                }
+
+                &__add {
+                    float:right;
+                    font-size: 2em;
+                    color: color(corange);
+                }
+
+                &__more {
+                    display: block;
+                    text-align: center;
+                    padding-top: $padding2;
+                    border-top: 1px solid lightgray;
+                }
+            }
+        }
+    }
 }
 
 .bottom-nav {
     position: fixed;
     bottom: 0;
+    left: 0;
     z-index: 3;
     display: flex;
     justify-content: space-around;
