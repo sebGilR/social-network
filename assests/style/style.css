@@ -205,7 +205,7 @@ a:hover {
   height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .pool {
@@ -250,6 +250,10 @@ a:hover {
 .pool__profile__info__details h2 {
   font-size: 1.4em;
   font-weight: bold;
+}
+
+.pool__profile__info__details p {
+  margin-bottom: 5px;
 }
 
 .pool__profile__info__details__add {
@@ -429,8 +433,9 @@ a:hover {
 
 .profile__communicate__gift {
   font-size: 5rem;
-  margin-right: 15px;
+  margin-right: 30px;
   float: left;
+  color: #4e50b8;
 }
 
 .profile__communicate__text {
@@ -451,5 +456,151 @@ a:hover {
   display: block;
   width: 100%;
   margin-top: 30px;
+  background-color: #4e50b8;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  border-radius: 9px;
+}
+
+.profile__videos {
+  width: 100%;
+}
+
+.profile__videos__title {
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.profile__videos__title:before, .profile__videos__title:after {
+  content: " ";
+  display: table;
+}
+
+.profile__videos__title:after {
+  clear: both;
+}
+
+.profile__videos__title span {
+  font-weight: normal;
+  color: gray;
+  padding-left: 5px;
+}
+
+.profile__videos__title .profile__videos__more {
+  font-size: 0.9rem;
+  float: right;
+}
+
+.profile__videos__tape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 10px;
+}
+
+.profile__videos__tape::-webkit-scrollbar {
+  height: 3px;
+}
+
+.profile__videos__tape::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+.profile__videos__tape img {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.profile__videos__tape img:first-child {
+  margin-left: 0;
+}
+
+.profile__verified {
+  padding: 15px 0;
+}
+
+.profile__verified h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profile__verified__card {
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.profile__verified__card:before, .profile__verified__card:after {
+  content: " ";
+  display: table;
+}
+
+.profile__verified__card:after {
+  clear: both;
+}
+
+.profile__verified__card__icon {
+  float: left;
+  font-size: 1.5rem;
+}
+
+.profile__verified__card__status {
+  font-size: 1rem;
+  float: right;
+  width: 1.7rem;
+  height: 1.7rem;
+  text-align: center;
+  padding-top: 0.35rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #4e50b8;
+}
+
+.profile__verified__card__text {
+  margin-left: 3rem;
+}
+
+.profile__verified__card__text h5 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.profile__verified__card__text span {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.profile__verified__card .fa-images {
+  color: #f0916e;
+}
+
+.profile__verified__card .fa-facebook-square {
+  color: #3b5998;
+  font-size: 1.8rem;
+}
+
+.profile__verified__card .fa-instagram {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.profile__top {
+  display: block;
+  margin-bottom: 60px;
 }
 /*# sourceMappingURL=style.css.map */
