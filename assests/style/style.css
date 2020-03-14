@@ -180,6 +180,7 @@ a:hover {
 
 .tape__future::-webkit-scrollbar {
   height: 3px;
+  background-color: transparent;
 }
 
 .tape__future::-webkit-scrollbar-thumb {
@@ -502,6 +503,7 @@ a:hover {
 
 .profile__videos__tape::-webkit-scrollbar {
   height: 3px;
+  background-color: transparent;
 }
 
 .profile__videos__tape::-webkit-scrollbar-thumb {
@@ -602,5 +604,69 @@ a:hover {
 .profile__top {
   display: block;
   margin-bottom: 60px;
+}
+
+/************************
+    Chat list page
+*/
+.main--chat-list {
+  width: 100%;
+  top: 50px;
+  left: 0;
+  bottom: 50px;
+  background-color: #f3f3f3;
+}
+
+.chat-list {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 46px;
+  overflow-y: scroll;
+  padding: 0 6%;
+}
+
+.chat-list__chat {
+  padding: 15px;
+  border-radius: 9px;
+  height: 80px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+}
+
+.chat-list__chat__photo {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 9px;
+  float: left;
+  margin-right: 10px;
+}
+
+.chat-list__chat__time {
+  float: right;
+  display: block;
+  height: 50px;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.chat-list__chat__preview h2 {
+  font-weight: bold;
+  margin: 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.chat-list__chat__preview__message {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: gray;
+  font-size: 0.9rem;
 }
 /*# sourceMappingURL=style.css.map */
