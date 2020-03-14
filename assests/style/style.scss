@@ -643,10 +643,24 @@ a {
 }
 
 .main--profile {
-    left:0;
-    width: 100%;
-    padding: 0 5%; 
     height: auto;
+    width: 100%;
+    background-color: $bg-gray;
+    left: 0;
+    position: relative;
+
+    @include phonemd {
+        margin-left: calc(-470px / 2);
+        left: 50%;
+        padding: 0;
+    }
+
+    @include desktop {
+        width: 300px;
+        top: 75px;
+        height: calc(100% - 95px);
+        margin-left: calc(-400px / 2);
+    }
 }
 
 .go-back {
@@ -658,19 +672,35 @@ a {
     ;
 }
 
+.profile-wrap {
+    width: 100%;
+    
+    .show-small {
+        @include desktop {
+            display: none;
+        }
+    }
+}
+
 .profile {
     position: relative;
+    padding: 0 $padding2;
+
+    
 
     &__gallery {
         margin-left: -5.5%;
         margin-right: -5.5%;
         height: 95vw;
+        max-height: 95vh;
         position: relative;
         margin-bottom: 50px;
+        width: 100%;
 
         &__photo {
-            width: 100%;
+            width: 111%;
             height: 95vw;
+            max-height: 95vh;
             object-fit: cover;
             border-radius: 0 0 $br2 $br2;
             box-shadow: $bottomshadow;

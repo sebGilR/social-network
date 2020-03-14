@@ -632,10 +632,28 @@ a:hover {
 }
 
 .main--profile {
-  left: 0;
-  width: 100%;
-  padding: 0 5%;
   height: auto;
+  width: 100%;
+  background-color: #f3f3f3;
+  left: 0;
+  position: relative;
+}
+
+@media screen and (min-width: 526px) {
+  .main--profile {
+    margin-left: calc(-470px / 2);
+    left: 50%;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main--profile {
+    width: 300px;
+    top: 75px;
+    height: calc(100% - 95px);
+    margin-left: calc(-400px / 2);
+  }
 }
 
 .go-back {
@@ -646,21 +664,35 @@ a:hover {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
+.profile-wrap {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .profile-wrap .show-small {
+    display: none;
+  }
+}
+
 .profile {
   position: relative;
+  padding: 0 10px;
 }
 
 .profile__gallery {
   margin-left: -5.5%;
   margin-right: -5.5%;
   height: 95vw;
+  max-height: 95vh;
   position: relative;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .profile__gallery__photo {
-  width: 100%;
+  width: 111%;
   height: 95vw;
+  max-height: 95vh;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0 0 9px 9px;
