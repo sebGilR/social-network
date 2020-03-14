@@ -61,7 +61,7 @@ $colors: (
     cgray: #414464
 );
 
-$fsize-icon: 1.6rem;
+$fsize-icon: 1.6em;
 
 $padding1: 5px;
 $padding2: 10px;
@@ -225,7 +225,7 @@ a {
     }
 
     &__left, &__right{
-        font-size: 0.9rem;
+        font-size: 0.9em;
         
         @include desktop {
             color: lightgray;
@@ -236,7 +236,7 @@ a {
                 text-decoration-color: lightgray;
 
                 i { 
-                    font-size: 0.8rem;
+                    font-size: 0.8em;
                     color: lightgray;
                 }
             }
@@ -245,12 +245,12 @@ a {
 
     &__left i , &__right i{
         font-size: calc(#{$fsize-icon} - 5px);
-        line-height: 0.8rem;
+        line-height: 0.8em;
     }
 
     &__title--brand {
         color: color(cpurple);
-        font-size: 1.8rem;
+        font-size: 1.8em;
         font-weight: bold;
 
         & span {
@@ -301,7 +301,7 @@ a {
             display: block;
             color: gray; 
             padding: $padding2 0;
-            font-size: 0.9rem;
+            font-size: 0.9em;
             font-weight: bold;
 
             i {
@@ -317,7 +317,7 @@ a {
             padding: 3px $padding2;
             border-radius: 3px;
             margin-top: -2px;
-            font-size: 0.8rem;
+            font-size: 0.8em;
             background-color: color(corange);
             color: white;
             float: right;
@@ -327,7 +327,7 @@ a {
             padding: 3px $padding2;
             border-radius: $br2;
             margin-top: -2px;
-            font-size: 0.8rem;
+            font-size: 0.8em;
             background-color: lightgray;
             color: gray;
             float: right;
@@ -353,13 +353,13 @@ a {
 
     &__text {
         h3 {
-            font-size: 0.9rem;
+            font-size: 0.9em;
             font-weight: bold;
             margin-top: 10px;
         }
         
         span {
-            font-size: 0.7rem;
+            font-size: 0.7em;
             color: gray;
 
             a {
@@ -383,7 +383,7 @@ a {
             text-align: center;
             padding: $padding2;
             width: calc(100% - 65px);
-            font-size: 0.8rem;
+            font-size: 0.8em;
             border-radius: $br1;
             color: white;
             background-color: color(cpurple);
@@ -427,7 +427,7 @@ a {
     @include clearfix;
 
     &__icon {
-        font-size: 2.5rem;
+        font-size: 2.5em;
         float: left;
         margin-top: 5px;
         margin-right: 5px;
@@ -435,18 +435,18 @@ a {
     }
 
     &__text {
-        padding-left: 3.5rem;
+        padding-left: 3.5em;
 
         h3 {
-            font-size: 0.9rem;
+            font-size: 0.9em;
             font-weight: bold;
             margin-bottom: 5px;
         }
         
         p {
-            font-size: 0.7rem;
+            font-size: 0.7em;
             color: gray;
-            line-height: 0.9rem;
+            line-height: 0.9em;
         }
     }
 }
@@ -596,7 +596,7 @@ a {
             width: 90%;
             padding: $padding2;
             left: 5%;
-            line-height: 1.6rem;
+            line-height: 1.6em;
             border-radius: 0 0 $br2 $br2;
             box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
             
@@ -789,7 +789,7 @@ a {
             display: block;
             margin-top: 15px;
             color: rgb(190, 190, 190);
-            font-size: 0.9rem;
+            font-size: 0.9em;
         }
 
         &__content {
@@ -807,7 +807,7 @@ a {
         @include clearfix;
 
         &__gift {
-            font-size: 5rem;
+            font-size: 5em;
             margin-right: 30px;
             float: left;
             color: color(cpurple);
@@ -817,12 +817,12 @@ a {
             padding-top: $padding3;
             
             h2 {
-                font-size: 1.1rem;
+                font-size: 1.1em;
                 margin-bottom: 5px;
             }
 
             p {
-                font-size: 0.9rem;
+                font-size: 0.9em;
                 color: gray;
             }
         }
@@ -855,7 +855,7 @@ a {
             }
 
             #{$self}__more {
-                font-size: 0.9rem;
+                font-size: 0.9em;
                 float: right;
             }
         }
@@ -897,31 +897,31 @@ a {
 
             &__icon {
                 float: left;
-                font-size: 1.5rem;
+                font-size: 1.5em;
             }
 
             &__status {
-                font-size: 1rem;
+                font-size: 1em;
                 float: right;
-                width: 1.7rem;
-                height: 1.7rem;
+                width: 1.7em;
+                height: 1.7em;
                 text-align: center;
-                padding-top: 0.35rem;
+                padding-top: 0.35em;
                 border-radius: $br1;
                 color: white;
                 background-color: color(cpurple);
             }
 
             &__text {
-                margin-left: 3rem;
+                margin-left: 3em;
 
                 h5 {
                     font-weight: bold;
-                    font-size: 0.9rem;
+                    font-size: 0.9em;
                 }
 
                 span {
-                    font-size: 0.7rem;
+                    font-size: 0.7em;
                     color: gray;
                 }
             }
@@ -932,16 +932,16 @@ a {
 
             .fa-facebook-square {
                 color: #3b5998;
-                font-size: 1.8rem;
+                font-size: 1.8em;
             }
 
             .fa-instagram {
                 display: inline-block;
                 vertical-align: middle;
-                font-size: 1.3rem;
-                line-height: 1.6rem;
-                width: 1.5rem;
-                height: 1.5rem;
+                font-size: 1.3em;
+                line-height: 1.6em;
+                width: 1.5em;
+                height: 1.5em;
                 text-align: center;
                 border-radius: 6px;
                 color: white;
@@ -1027,7 +1027,7 @@ a {
             display: block;
             height: 50px;
             margin-top: 5px;
-            font-size: 0.9rem;
+            font-size: 0.9em;
         }
 
         &__preview {
@@ -1046,7 +1046,7 @@ a {
                 overflow: hidden;
                 white-space: nowrap;
                 color: gray;
-                font-size: 0.9rem;
+                font-size: 0.9em;
             }
         }
     }
@@ -1101,19 +1101,19 @@ a {
             input[type="file"]{
                 display: none;
             }
-            font-size: 1.2rem;
+            font-size: 1.2em;
             cursor: pointer;
         }
 
         &__write {
             position: relative;
-            width: calc(100% - 3rem);
+            width: calc(100% - 3em);
             padding: 0 $padding2;
 
             textarea {
                 width: 100%;
-                height: 2rem;
-                line-height: 1.9rem;
+                height: 2em;
+                line-height: 1.9em;
                 padding-left: $padding2;
                 outline: none;
                 border-radius: $br2;
@@ -1130,12 +1130,12 @@ a {
         }
 
         &__send {
-            font-size: 1.1rem;
+            font-size: 1.1em;
             cursor: pointer;
-            width: 2rem;
-            height: 2rem;
+            width: 2em;
+            height: 2em;
             margin-top: -1px;
-            line-height: 2rem;
+            line-height: 2em;
             text-align: center;
             background-color: color(cpurple);
             color: white;
@@ -1177,11 +1177,11 @@ a {
 
         &__bubble {
             width: 80%;
-            font-size: 0.9rem;
+            font-size: 0.9em;
 
             &__time {
                 color: gray;
-                font-size: 0.8rem;
+                font-size: 0.8em;
                 margin: 0 10px;
             }
 

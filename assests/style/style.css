@@ -178,7 +178,7 @@ a:hover {
 }
 
 .nav__left, .nav__right {
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 @media screen and (min-width: 1024px) {
@@ -192,19 +192,19 @@ a:hover {
             text-decoration-color: lightgray;
   }
   .nav__left span i, .nav__right span i {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     color: lightgray;
   }
 }
 
 .nav__left i, .nav__right i {
-  font-size: calc(1.6rem - 5px);
-  line-height: 0.8rem;
+  font-size: calc(1.6em - 5px);
+  line-height: 0.8em;
 }
 
 .nav__title--brand {
   color: #4e50b8;
-  font-size: 1.8rem;
+  font-size: 1.8em;
   font-weight: bold;
 }
 
@@ -258,7 +258,7 @@ a:hover {
   display: block;
   color: gray;
   padding: 10px 0;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -274,7 +274,7 @@ a:hover {
   padding: 3px 10px;
   border-radius: 3px;
   margin-top: -2px;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   background-color: #f0916e;
   color: white;
   float: right;
@@ -284,7 +284,7 @@ a:hover {
   padding: 3px 10px;
   border-radius: 9px;
   margin-top: -2px;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   background-color: lightgray;
   color: gray;
   float: right;
@@ -315,13 +315,13 @@ a:hover {
 }
 
 .side__profile__text h3 {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: bold;
   margin-top: 10px;
 }
 
 .side__profile__text span {
-  font-size: 0.7rem;
+  font-size: 0.7em;
   color: gray;
 }
 
@@ -352,7 +352,7 @@ a:hover {
   text-align: center;
   padding: 10px;
   width: calc(100% - 65px);
-  font-size: 0.8rem;
+  font-size: 0.8em;
   border-radius: 5px;
   color: white;
   background-color: #4e50b8;
@@ -402,7 +402,7 @@ a:hover {
 }
 
 .side-promo__icon {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   float: left;
   margin-top: 5px;
   margin-right: 5px;
@@ -410,19 +410,19 @@ a:hover {
 }
 
 .side-promo__text {
-  padding-left: 3.5rem;
+  padding-left: 3.5em;
 }
 
 .side-promo__text h3 {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 .side-promo__text p {
-  font-size: 0.7rem;
+  font-size: 0.7em;
   color: gray;
-  line-height: 0.9rem;
+  line-height: 0.9em;
 }
 
 .side__search {
@@ -591,7 +591,7 @@ a:hover {
   width: 90%;
   padding: 10px;
   left: 5%;
-  line-height: 1.6rem;
+  line-height: 1.6em;
   border-radius: 0 0 9px 9px;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
@@ -810,7 +810,7 @@ a:hover {
   display: block;
   margin-top: 15px;
   color: #bebebe;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 .profile__info__content {
@@ -838,7 +838,7 @@ a:hover {
 }
 
 .profile__communicate__gift {
-  font-size: 5rem;
+  font-size: 5em;
   margin-right: 30px;
   float: left;
   color: #4e50b8;
@@ -849,12 +849,12 @@ a:hover {
 }
 
 .profile__communicate__text h2 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   margin-bottom: 5px;
 }
 
 .profile__communicate__text p {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: gray;
 }
 
@@ -894,7 +894,7 @@ a:hover {
 }
 
 .profile__videos__title .profile__videos__more {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   float: right;
 }
 
@@ -954,32 +954,32 @@ a:hover {
 
 .profile__verified__card__icon {
   float: left;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .profile__verified__card__status {
-  font-size: 1rem;
+  font-size: 1em;
   float: right;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.7em;
+  height: 1.7em;
   text-align: center;
-  padding-top: 0.35rem;
+  padding-top: 0.35em;
   border-radius: 5px;
   color: white;
   background-color: #4e50b8;
 }
 
 .profile__verified__card__text {
-  margin-left: 3rem;
+  margin-left: 3em;
 }
 
 .profile__verified__card__text h5 {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 .profile__verified__card__text span {
-  font-size: 0.7rem;
+  font-size: 0.7em;
   color: gray;
 }
 
@@ -989,16 +989,16 @@ a:hover {
 
 .profile__verified__card .fa-facebook-square {
   color: #3b5998;
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 
 .profile__verified__card .fa-instagram {
   display: inline-block;
   vertical-align: middle;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  width: 1.5em;
+  height: 1.5em;
   text-align: center;
   border-radius: 6px;
   color: white;
@@ -1091,7 +1091,7 @@ a:hover {
   display: block;
   height: 50px;
   margin-top: 5px;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 .chat-list__chat__preview h2 {
@@ -1107,7 +1107,7 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   color: gray;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 /************************
@@ -1166,7 +1166,7 @@ a:hover {
 }
 
 .main--chat__actions__file {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
@@ -1176,14 +1176,14 @@ a:hover {
 
 .main--chat__actions__write {
   position: relative;
-  width: calc(100% - 3rem);
+  width: calc(100% - 3em);
   padding: 0 10px;
 }
 
 .main--chat__actions__write textarea {
   width: 100%;
-  height: 2rem;
-  line-height: 1.9rem;
+  height: 2em;
+  line-height: 1.9em;
   padding-left: 10px;
   outline: none;
   border-radius: 9px;
@@ -1199,12 +1199,12 @@ a:hover {
 }
 
 .main--chat__actions__send {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 2em;
+  height: 2em;
   margin-top: -1px;
-  line-height: 2rem;
+  line-height: 2em;
   text-align: center;
   background-color: #4e50b8;
   color: white;
@@ -1254,12 +1254,12 @@ a:hover {
 
 .chat__message__bubble {
   width: 80%;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 .chat__message__bubble__time {
   color: gray;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   margin: 0 10px;
 }
 
