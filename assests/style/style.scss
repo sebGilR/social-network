@@ -74,6 +74,8 @@ $textshadow: 0 0 10px rgba(0, 0, 0, 0.6);
 
 $bottomshadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 
+$bg-gray: rgb(243, 243, 243);
+
 $phonemd: 526px;
 $tablet: 768px;
 $desktop: 1024px;
@@ -145,6 +147,10 @@ body, html {
 body {
     font-family: 'Open Sans', sans-serif;
     color: color(cgray);
+
+    @include desktop {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 main {
@@ -161,8 +167,14 @@ main {
     margin-left: -45%;
 
     @include phonemd {
-        left: 50%;
         margin-left: calc(-470px / 2);
+    }
+
+    @include desktop {
+        width: 400px;
+        top: 75px;
+        height: calc(100% - 75px);
+        margin-left: calc(-400px / 2);
     }
 }
 
@@ -195,9 +207,34 @@ a {
     margin-bottom: 3px;
     box-shadow: $bottomshadow;
     font-weight: bold;
+    background-color: white;
 
-    &__left, &__right {
-        font-size: $fsize-icon;
+    @include desktop {
+        padding: 0 calc(50% - 470px);
+    }
+
+    &__left, &__right{
+        font-size: 0.9rem;
+        
+        @include desktop {
+            color: lightgray;
+
+            span {
+                color: color(cgray);
+                text-decoration: underline;
+                text-decoration-color: lightgray;
+
+                i { 
+                    font-size: 0.8rem;
+                    color: lightgray;
+                }
+            }
+        }
+    }
+
+    &__left i , &__right i{
+        font-size: calc(#{$fsize-icon} - 5px);
+        line-height: 0.8rem;
     }
 
     &__title--brand {
@@ -209,6 +246,219 @@ a {
             color: color(corange);
         }
     }
+
+    .fa-list-alt {
+        margin-right: $padding3;
+    }
+
+    &__user {
+        padding-left: $padding3;
+        margin-left: $padding3;
+        border-left: 1px solid lightgray;
+    }
+
+    .show-small {
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .show-big {
+        display: none;
+
+        @include desktop {
+            display: inline-block;
+        }
+    }
+}
+
+.side-menu {
+    display: none;
+
+    @include desktop {
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-left: calc((-400px / 2) - 270px);
+        top: 75px;
+        bottom: 25px;
+        width: 250px;
+    }
+
+    &__list {
+        a {
+            display: block;
+            color: gray; 
+            padding: $padding2 0;
+            font-size: 0.9rem;
+            font-weight: bold;
+
+            i {
+                margin-right: 15px;
+            }
+        }
+
+        &__count--1 {
+            padding: 3px $padding2;
+            border-radius: 3px;
+            margin-top: -2px;
+            font-size: 0.8rem;
+            background-color: color(corange);
+            color: white;
+            float: right;
+        }
+
+        &__count--2 {
+            padding: 3px $padding2;
+            border-radius: $br2;
+            margin-top: -2px;
+            font-size: 0.8rem;
+            background-color: lightgray;
+            color: gray;
+            float: right;
+        }
+    }
+
+}
+
+.side__profile {
+    @include clearfix;
+    margin-bottom: 10px;
+
+    &__photo {
+        float: left;
+        margin-right: 10px;
+        border-radius: $br1;
+    }
+
+    &__icon {
+        float: right;
+        margin-top: 15px;
+    }
+
+    &__text {
+        h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        span {
+            font-size: 0.7rem;
+            color: gray;
+
+            a {
+                color: color(cpurple);
+                text-decoration: underline;
+                text-decoration-color: lightgray;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__likes i {
+            color: color(corange)
+        }
+
+        &__cta {
+            text-align: center;
+            padding: $padding2;
+            width: calc(100% - 65px);
+            font-size: 0.8rem;
+            border-radius: $br1;
+            color: white;
+            background-color: color(cpurple);
+
+            &:hover {
+                color: color(corange)
+            }
+
+            i {
+                margin-right: 10px;
+            }
+
+            &--promo {
+                display: block;
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.side-load {
+    display: none;
+
+    h3 {
+        font-weight: bold;
+    }
+
+    @include desktop {
+        display: block;
+        position: absolute;
+        right: 50%;
+        margin-right: calc((-400px / 2) - 270px);
+        top: 75px;
+        bottom: 25px;
+        width: 250px;
+    }
+}
+
+.side-promo {
+    @include clearfix;
+
+    &__icon {
+        font-size: 2.5rem;
+        float: left;
+        margin-top: 5px;
+        margin-right: 5px;
+        color: color(corange);
+    }
+
+    &__text {
+        padding-left: 3.5rem;
+
+        h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        p {
+            font-size: 0.7rem;
+            color: gray;
+            line-height: 0.9rem;
+        }
+    }
+}
+
+.side__search {
+    display: flex;
+    justify-content: space-between;
+
+    i {
+        color: color(cpurple);
+    }
+}
+
+.side__profile__details {
+    position: absolute;
+    top: 176px;
+    bottom: 0;
+    overflow-y: scroll;
+    font-size: 95%;
+}
+
+.side-card {
+    width: 100%;
+    padding: $padding2;
+    background-color: white;
+    border-radius: $br2;
+    margin-bottom: 15px;
 }
 
 .profile__gallery__bullets {
@@ -289,6 +539,18 @@ a {
     top: 56px;
     bottom: 60px;
 
+    @include desktop {
+        bottom: 25px;
+    }
+
+    .profile__gallery__actions {
+        display: none;
+
+        @include desktop {
+            display: flex;
+        }
+    }
+
     &__profile {
         height: 100%;
 
@@ -304,6 +566,10 @@ a {
                 height: calc(100% - 119px);
                 border-radius: $br2;
                 object-fit: cover;
+
+                @include desktop {
+                    height: calc(100% - 78px);
+                }
             }
 
         }
@@ -318,6 +584,9 @@ a {
             border-radius: 0 0 $br2 $br2;
             box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
             
+            @include desktop {
+                display:  none;
+            }
 
             &__details {
                 h2 {
@@ -340,6 +609,10 @@ a {
                     text-align: center;
                     padding-top: $padding2;
                     border-top: 1px solid lightgray;
+
+                    @include desktop {
+                        display: none;
+                    }
                 }
             }
         }
@@ -358,6 +631,10 @@ a {
     width: 100%;
     box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.1);
     background: white;
+
+    @include desktop {
+        display: none;
+    }
 }
 
 .main--profile {
@@ -402,6 +679,10 @@ a {
             position: absolute;
             bottom: -30px;
             width: 100%;
+
+            @include desktop {
+                bottom: 5px;
+            }
 
             &__prev, &__next {
                 height: 40px;
@@ -630,6 +911,15 @@ a {
     }
 }
 
+.profile__info__header {
+    padding: 0;
+
+    h1 {
+        font-size: 100%;
+    }
+}
+
+
 /************************
     Chat list page
 */
@@ -639,7 +929,7 @@ a {
     top: 50px;
     left: 0;
     bottom: 50px;
-    background-color: rgb(243, 243, 243);
+    background-color: $bg-gray;
 }
 
 .chat-list {
@@ -703,7 +993,7 @@ a {
 */
 
 .main--chat {
-    background-color: rgb(243, 243, 243);
+    background-color: $bg-gray;
     position: fixed;
     width: 100%;
     top: 50px;
