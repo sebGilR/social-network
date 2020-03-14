@@ -146,6 +146,7 @@ $desktop: 1024px;
 
 * {
     @include scroll-y;
+    font-size: 95%;
 }
 
 body, html {
