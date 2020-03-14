@@ -197,17 +197,17 @@ a:hover {
 }
 
 @media screen and (min-width: 1024px) {
-  .nav .show-small {
+  .show-small {
     display: none;
   }
 }
 
-.nav .show-big {
+.show-big {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .nav .show-big {
+  .show-big {
     display: inline-block;
   }
 }
@@ -238,6 +238,10 @@ a:hover {
 
 .side-menu__list a i {
   margin-right: 15px;
+}
+
+.side-menu__list a:hover {
+  color: #414464;
 }
 
 .side-menu__list__count--1 {
@@ -436,6 +440,7 @@ a:hover {
 
 .profile__gallery__bullets li {
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .profile__gallery__bullets .active {
@@ -961,19 +966,39 @@ a:hover {
 */
 .main--chat-list {
   width: 100%;
-  top: 50px;
-  left: 0;
-  bottom: 50px;
   background-color: #f3f3f3;
+  left: 0;
+}
+
+@media screen and (min-width: 526px) {
+  .main--chat-list {
+    margin-left: calc(-470px / 2);
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main--chat-list {
+    width: 300px;
+    top: 75px;
+    height: calc(100% - 95px);
+    margin-left: calc(-400px / 2);
+  }
 }
 
 .chat-list {
   position: absolute;
   width: 100%;
   top: 0;
-  bottom: 46px;
+  bottom: 0;
   overflow-y: scroll;
   padding: 0 6%;
+}
+
+@media screen and (min-width: 1024px) {
+  .chat-list {
+    padding: 0;
+  }
 }
 
 .chat-list__chat {
@@ -984,6 +1009,13 @@ a:hover {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   margin: 15px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .chat-list__chat {
+    margin: 0;
+    border-radius: 0;
+  }
 }
 
 .chat-list__chat__photo {
@@ -1024,6 +1056,9 @@ a:hover {
     Chat window
 */
 .main--chat {
+  width: 100%;
+  background-color: #f3f3f3;
+  left: 0;
   background-color: #f3f3f3;
   position: fixed;
   width: 100%;
@@ -1031,6 +1066,22 @@ a:hover {
   left: 0;
   height: calc(100% - 114px);
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 526px) {
+  .main--chat {
+    margin-left: calc(-470px / 2);
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main--chat {
+    width: 300px;
+    top: 75px;
+    height: calc(100% - 95px);
+    margin-left: calc(-400px / 2);
+  }
 }
 
 .main--chat__actions {
@@ -1100,6 +1151,33 @@ a:hover {
   background-color: #4e50b8;
   color: white;
   border-radius: 9px;
+}
+
+.chat-container {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 370px;
+  bottom: 20px;
+  margin-left: calc(300px / 2);
+  background-color: white;
+  border-left: 1px solid lightgray;
+}
+
+.chat-container .main--chat__actions {
+  width: 370px;
+  bottom: 20px;
+}
+
+.chat-wrap {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .chat {
+    overflow-y: scroll;
+    height: 100%;
+  }
 }
 
 .chat__message {

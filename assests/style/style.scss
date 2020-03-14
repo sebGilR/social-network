@@ -256,19 +256,19 @@ a {
         margin-left: $padding3;
         border-left: 1px solid lightgray;
     }
+}
 
-    .show-small {
-        @include desktop {
-            display: none;
-        }
-    }
-
-    .show-big {
+.show-small {
+    @include desktop {
         display: none;
+    }
+}
 
-        @include desktop {
-            display: inline-block;
-        }
+.show-big {
+    display: none;
+
+    @include desktop {
+        display: inline-block;
     }
 }
 
@@ -295,6 +295,10 @@ a {
 
             i {
                 margin-right: 15px;
+            }
+
+            &:hover {
+                color: color(cgray);
             }
         }
 
@@ -472,6 +476,7 @@ a {
     
     li {
         margin-bottom: 5px;
+        cursor: pointer;
     }
 
     .active {
@@ -926,19 +931,33 @@ a {
 
 .main--chat-list {
     width: 100%;
-    top: 50px;
-    left: 0;
-    bottom: 50px;
     background-color: $bg-gray;
+    left: 0;
+
+    @include phonemd {
+        margin-left: calc(-470px / 2);
+        left: 50%;
+    }
+
+    @include desktop {
+        width: 300px;
+        top: 75px;
+        height: calc(100% - 95px);
+        margin-left: calc(-400px / 2);
+    }
 }
 
 .chat-list {
     position: absolute;
     width: 100%;
     top: 0;
-    bottom: 46px;
+    bottom: 0;
     overflow-y: scroll;
     padding: 0 6%;
+
+    @include desktop {
+        padding: 0;
+    }
 
     &__chat {
         padding: $padding3;
@@ -948,6 +967,10 @@ a {
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
         margin: 15px 0;
        
+        @include desktop {
+            margin: 0;
+            border-radius: 0;
+        }
 
         &__photo {
             width: 50px;
@@ -993,6 +1016,22 @@ a {
 */
 
 .main--chat {
+    width: 100%;
+    background-color: $bg-gray;
+    left: 0;
+
+    @include phonemd {
+        margin-left: calc(-470px / 2);
+        left: 50%;
+    }
+
+    @include desktop {
+        width: 300px;
+        top: 75px;
+        height: calc(100% - 95px);
+        margin-left: calc(-400px / 2);
+    }
+
     background-color: $bg-gray;
     position: fixed;
     width: 100%;
@@ -1064,7 +1103,31 @@ a {
     }
 }
 
+.chat-container {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 370px;
+    bottom: 20px;
+    margin-left: calc(300px / 2);
+    background-color: white;
+    border-left: 1px solid lightgray;
+
+    .main--chat__actions {
+        width: 370px;
+        bottom: 20px;
+    }
+}
+
+.chat-wrap {
+    width: 100%;
+}
+
 .chat {
+    @include desktop{
+        overflow-y: scroll;
+    height: 100%;
+    }
 
     &__message {
         width: 100%;
