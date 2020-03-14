@@ -62,6 +62,19 @@ table {
 }
 
 /* End of reset */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
 body, html {
   height: 100%;
 }
@@ -69,6 +82,19 @@ body, html {
 body {
   font-family: 'Open Sans', sans-serif;
   color: #414464;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
 }
 
 @media screen and (min-width: 1024px) {
