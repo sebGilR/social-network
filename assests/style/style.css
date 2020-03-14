@@ -62,10 +62,6 @@ table {
 }
 
 /* End of reset */
-* {
-  font-size: 95%;
-}
-
 *::-webkit-scrollbar {
   width: 4px;
 }
