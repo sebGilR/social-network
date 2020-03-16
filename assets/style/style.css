@@ -987,7 +987,7 @@ a:hover {
   margin: 20px 0;
 }
 
-.profile__verified__card::before ,
+.profile__verified__card::before,
 .profile__verified__card::after {
   content: " ";
   display: table;
