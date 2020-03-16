@@ -41,9 +41,9 @@ Original design: [Here](https://www.behance.net/gallery/70285515/Swipex-This-app
 
 👤 **Sebastian Gil Rodriguez**
 
-- Github: [@lBuggie](https://github.com/sebGilR)
+- Github: [@sebGilR](https://github.com/sebGilR)
 - Twitter: [@sebGilR](https://twitter.com/sebGilR)
-- Linkedin: [linkedin](https://www.linkedin.com/in/sebastianGilRodriguez)
+- Linkedin: [sebastianGilRodriguez](https://www.linkedin.com/in/sebastianGilRodriguez)
 
 ## 🤝 Contributing
 
