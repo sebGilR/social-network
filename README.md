@@ -21,6 +21,7 @@ Follow the guidelines of the given design, including:
 
 Original design: [Here](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
 
+## Screenshot
 ![screenshot](assets/images/screenshot1.png)
 ![screenshot](assets/images/screenshot2.png)
 ![screenshot](assets/images/screenshot3.png)
