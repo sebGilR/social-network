@@ -21,19 +21,20 @@ Follow the guidelines of the given design, including:
 
 Original design: [Here](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
 
-![screenshot](UPDATE)
+![screenshot](assets/images/screenshot1.png)
+![screenshot](assets/images/screenshot2.png)
+![screenshot](assets/images/screenshot3.png)
 
 ## Built With
 
 - HTML5, CSS3
 - Flexbox
-- Grid
 - Sass
 - BEM (naming structure)
 
 ## Live Demo
 
-[Live Demo Link PENDING](UPDATE)
+[Live Demo Link](https://rawcdn.githack.com/lBuggie/social-network/8d2ca79745691ab21801c74c85b9c185bbcf2c68/index.html)
 
 ## Authors
 
