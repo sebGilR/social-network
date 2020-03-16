@@ -1,1207 +1,1219 @@
-/* Start of reset */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+@charset "UTF-8";
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+ol,
+ul {
+  list-style: none;
 }
 
 /* End of reset */
 
 $colors: (
-    cpurple: #4e50b8,
-    corange: #f0916e,
-    cgray: #414464
+  cpurple: #4e50b8,
+  corange: #f0916e,
+  cgray: #414464
 );
-
 $fsize-icon: 1.6em;
-
 $padding1: 5px;
 $padding2: 10px;
 $padding3: 15px;
 $margin: 10px;
 $br1: 5px;
 $br2: 9px;
-
 $textshadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
 $bottomshadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-
 $bg-gray: rgb(243, 243, 243);
-
 $phonemd: 526px;
 $tablet: 768px;
 $desktop: 1024px;
 
-
-
-@function color($color-name){
-    @return map-get($colors, $color-name)
-};
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
 
 @mixin scroll-x {
-    &::-webkit-scrollbar {
-        height: 3px;
-        background-color: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-    }
+  &::-webkit-scrollbar {
+    height: 3px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+  }
 }
 
 @mixin scroll-y {
-    &::-webkit-scrollbar {
-        width: 4px;
-    }
-       
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-        border:  0;
-    }
-       
-    &::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-    }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+  }
 }
 
 @mixin center-x {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 @mixin clearfix {
-    &:before, &:after {
-        content: " ";
-        display: table;
-    }
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
 
-    &:after {
-        clear: both;
-    }
+  &::after {
+    clear: both;
+  }
 }
 
 @mixin phonemd {
-    @media screen and (min-width: #{$phonemd}) {
-        @content;
-    }
+  @media screen and (min-width: #{$phonemd}) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media screen and (min-width: #{$tablet}) {
-        @content;
-    }
+  @media screen and (min-width: #{$tablet}) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media screen and (min-width: #{$desktop}) {
-        @content;
-    }
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
 }
 
 * {
-    @include scroll-y;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+
+  @include scroll-y;
 }
 
-body, html {
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    color: color(cgray);
+  font-family: 'Open Sans', sans-serif;
+  color: color(cgray);
 
-    @include scroll-y;
-
-    @include desktop {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
+  @include desktop {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 main {
-    width: 90%;
-    max-width: 470.7px;
-    height: calc(100% - 55px);
-    @include center-x;
-    position: absolute;
-    left: 5%;
+  width: 90%;
+  max-width: 470.7px;
+  height: calc(100% - 55px);
+
+  @include center-x;
+
+  position: absolute;
+  left: 5%;
 }
 
 .main {
-    left: 50%;
-    margin-left: -45%;
-    
+  left: 50%;
+  margin-left: -45%;
 
-    @include phonemd {
-        margin-left: calc(-470px / 2);
-    }
+  @include phonemd {
+    margin-left: calc(-470px / 2);
+  }
 
-    @include desktop {
-        width: 400px;
-        top: 75px;
-        height: calc(100% - 75px);
-        margin-left: calc(-400px / 2);
-    }
+  @include desktop {
+    width: 400px;
+    top: 75px;
+    height: calc(100% - 75px);
+    margin-left: calc(-400px / 2);
+  }
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 
-    &:hover {
-        text-decoration: inherit;
-        color: inherit;
-    }
+  &:hover {
+    text-decoration: inherit;
+    color: inherit;
+  }
 }
 
 .online {
-    display: inline-block;
+  display: inline-block;
 
-    &:after {
-        font-weight: bold;
-        content: " •";
-        color: rgb(98, 199, 98);
-    }
+  &::after {
+    font-weight: bold;
+    content: " •";
+    color: rgb(98, 199, 98);
+  }
 }
 
 .nav {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $padding2 $padding3;
-    margin-bottom: 3px;
-    box-shadow: $bottomshadow;
-    font-weight: bold;
-    background-color: white;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding2 $padding3;
+  margin-bottom: 3px;
+  box-shadow: $bottomshadow;
+  font-weight: bold;
+  background-color: white;
+
+  @include desktop {
+    padding: 0 calc(50% - 470px);
+  }
+
+  &__left,
+  &__right {
+    font-size: 0.9em;
 
     @include desktop {
-        padding: 0 calc(50% - 470px);
-    }
+      color: lightgray;
 
-    &__left, &__right{
-        font-size: 0.9em;
-        
-        @include desktop {
-            color: lightgray;
+      span {
+        color: color(cgray);
+        text-decoration: underline;
+        text-decoration-color: lightgray;
 
-            span {
-                color: color(cgray);
-                text-decoration: underline;
-                text-decoration-color: lightgray;
-
-                i { 
-                    font-size: 0.8em;
-                    color: lightgray;
-                }
-            }
+        i {
+          font-size: 0.8em;
+          color: lightgray;
         }
+      }
     }
+  }
 
-    &__left i , &__right i{
-        font-size: calc(#{$fsize-icon} - 5px);
-        line-height: 0.8em;
+  &__left i,
+  &__right i {
+    font-size: calc(#{$fsize-icon} - 5px);
+    line-height: 0.8em;
+  }
+
+  &__title--brand {
+    color: color(cpurple);
+    font-size: 1.8em;
+    font-weight: bold;
+
+    & span {
+      color: color(corange);
     }
+  }
 
-    &__title--brand {
-        color: color(cpurple);
-        font-size: 1.8em;
-        font-weight: bold;
+  .fa-list-alt {
+    margin-right: $padding3;
+  }
 
-        & span {
-            color: color(corange);
-        }
-    }
-
-    .fa-list-alt {
-        margin-right: $padding3;
-    }
-
-    &__user {
-        padding-left: $padding3;
-        margin-left: $padding3;
-        border-left: 1px solid lightgray;
-    }
+  &__user {
+    padding-left: $padding3;
+    margin-left: $padding3;
+    border-left: 1px solid lightgray;
+  }
 }
 
 .show-small {
-    @include desktop {
-        display: none;
-    }
+  @include desktop {
+    display: none;
+  }
 }
 
 .show-big {
-    display: none;
+  display: none;
 
-    @include desktop {
-        display: inline-block;
-    }
+  @include desktop {
+    display: inline-block;
+  }
 }
 
 .side-menu {
-    display: none;
+  display: none;
 
-    @include desktop {
-        display: block;
-        position: absolute;
-        left: 50%;
-        margin-left: calc((-400px / 2) - 270px);
-        top: 75px;
-        bottom: 25px;
-        width: 250px;
+  @include desktop {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: calc((-400px / 2) - 270px);
+    top: 75px;
+    bottom: 25px;
+    width: 250px;
+  }
+
+  &__list {
+    a {
+      display: block;
+      color: gray;
+      padding: $padding2 0;
+      font-size: 0.9em;
+      font-weight: bold;
+
+      i {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        color: color(cgray);
+      }
     }
 
-    &__list {
-        a {
-            display: block;
-            color: gray; 
-            padding: $padding2 0;
-            font-size: 0.9em;
-            font-weight: bold;
-
-            i {
-                margin-right: 15px;
-            }
-
-            &:hover {
-                color: color(cgray);
-            }
-        }
-
-        &__count--1 {
-            padding: 3px $padding2;
-            border-radius: 3px;
-            margin-top: -2px;
-            font-size: 0.8em;
-            background-color: color(corange);
-            color: white;
-            float: right;
-        }
-
-        &__count--2 {
-            padding: 3px $padding2;
-            border-radius: $br2;
-            margin-top: -2px;
-            font-size: 0.8em;
-            background-color: lightgray;
-            color: gray;
-            float: right;
-        }
+    &__count--1 {
+      padding: 3px $padding2;
+      border-radius: 3px;
+      margin-top: -2px;
+      font-size: 0.8em;
+      background-color: color(corange);
+      color: white;
+      float: right;
     }
 
+    &__count--2 {
+      padding: 3px $padding2;
+      border-radius: $br2;
+      margin-top: -2px;
+      font-size: 0.8em;
+      background-color: lightgray;
+      color: gray;
+      float: right;
+    }
+  }
 }
 
 .side__profile {
-    @include clearfix;
-    margin-bottom: 10px;
+  @include clearfix;
 
-    &__photo {
-        float: left;
+  margin-bottom: 10px;
+
+  &__photo {
+    float: left;
+    margin-right: 10px;
+    border-radius: $br1;
+  }
+
+  &__icon {
+    float: right;
+    margin-top: 15px;
+  }
+
+  &__text {
+    h3 {
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    span {
+      font-size: 0.7em;
+      color: gray;
+    }
+
+    &__link {
+      color: color(cpurple);
+      text-decoration: underline;
+      text-decoration-color: lightgray;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__likes__icon {
+      color: color(corange);
+    }
+
+    &__cta {
+      text-align: center;
+      padding: $padding2;
+      width: calc(100% - 65px);
+      font-size: 0.8em;
+      border-radius: $br1;
+      color: white;
+      background-color: color(cpurple);
+
+      &:hover {
+        color: color(corange);
+      }
+
+      &__icon {
         margin-right: 10px;
-        border-radius: $br1;
+      }
+
+      &--promo {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+      }
     }
-
-    &__icon {
-        float: right;
-        margin-top: 15px;
-    }
-
-    &__text {
-        h3 {
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        
-        span {
-            font-size: 0.7em;
-            color: gray;
-
-            a {
-                color: color(cpurple);
-                text-decoration: underline;
-                text-decoration-color: lightgray;
-            }
-        }
-    }
-
-    &__actions {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        &__likes i {
-            color: color(corange)
-        }
-
-        &__cta {
-            text-align: center;
-            padding: $padding2;
-            width: calc(100% - 65px);
-            font-size: 0.8em;
-            border-radius: $br1;
-            color: white;
-            background-color: color(cpurple);
-
-            &:hover {
-                color: color(corange)
-            }
-
-            i {
-                margin-right: 10px;
-            }
-
-            &--promo {
-                display: block;
-                width: 100%;
-                margin-top: 10px;
-            }
-        }
-    }
+  }
 }
 
 .side-load {
-    display: none;
+  display: none;
 
-    h3 {
-        font-weight: bold;
-    }
+  h3 {
+    font-weight: bold;
+  }
 
-    @include desktop {
-        display: block;
-        position: absolute;
-        right: 50%;
-        margin-right: calc((-400px / 2) - 270px);
-        top: 75px;
-        bottom: 25px;
-        width: 250px;
-    }
+  @include desktop {
+    display: block;
+    position: absolute;
+    right: 50%;
+    margin-right: calc((-400px / 2) - 270px);
+    top: 75px;
+    bottom: 25px;
+    width: 250px;
+  }
 }
 
 .side-promo {
-    @include clearfix;
+  @include clearfix;
 
-    &__icon {
-        font-size: 2.5em;
-        float: left;
-        margin-top: 5px;
-        margin-right: 5px;
-        color: color(corange);
+  &__icon {
+    font-size: 2.5em;
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: color(corange);
+  }
+
+  &__text {
+    padding-left: 3.5em;
+
+    h3 {
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
-    &__text {
-        padding-left: 3.5em;
-
-        h3 {
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        p {
-            font-size: 0.7em;
-            color: gray;
-            line-height: 0.9em;
-        }
+    p {
+      font-size: 0.7em;
+      color: gray;
+      line-height: 0.9em;
     }
+  }
 }
 
 .side__search {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    i {
-        color: color(cpurple);
-    }
+  &__icon {
+    color: color(cpurple);
+  }
 }
 
 .side__profile__details {
-    position: absolute;
-    top: 176px;
-    bottom: 0;
-    overflow-y: scroll;
-    font-size: 95%;
+  position: absolute;
+  top: 176px;
+  bottom: 0;
+  overflow-y: scroll;
+  font-size: 95%;
 }
 
 .side-card {
-    width: 100%;
-    padding: $padding2;
-    background-color: white;
-    border-radius: $br2;
-    margin-bottom: 15px;
+  width: 100%;
+  padding: $padding2;
+  background-color: white;
+  border-radius: $br2;
+  margin-bottom: 15px;
 }
 
 .profile__gallery__bullets {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    font-size: 9px;
-    text-shadow: $textshadow;
-    z-index: 3;
-    
-    li {
-        margin-bottom: 5px;
-        cursor: pointer;
-    }
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 9px;
+  text-shadow: $textshadow;
+  z-index: 3;
 
-    .active {
-        color: color(cpurple);
-    }
+  li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .active {
+    color: color(cpurple);
+  }
 }
 
 .tape {
-    $self: &;
-    display: flex;
-    border-right: $br2;
+  $self: &;
 
-    &__recent {
-        &__person {
-            margin-left: -$padding2;
-            padding-right: $padding2;
-            border-right: 1px solid lightgray;
-            position: relative;
-        }
-    }
+  display: flex;
+  border-right: $br2;
 
-    &__future {
-        display: flex;
-        overflow-x: scroll;
-        margin-left: $padding2;
-
-        #{$self}__person {
-            &:first-child {
-                padding-left: 0;
-            }
-    
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-
-        @include scroll-x;
-    }
-
+  &__recent {
     &__person {
-        height: 50px;
-        padding: 0 $padding2;
+      margin-left: -$padding2;
+      padding-right: $padding2;
+      border-right: 1px solid lightgray;
+      position: relative;
+    }
+  }
 
-        &__choice {
-            position: absolute;
-            right: 3px;
-            top: 20%;
-            background-color: white;
-            border-radius: 50%;
-            color: color(cpurple);
-        }
+  &__future {
+    display: flex;
+    overflow-x: scroll;
+    margin-left: $padding2;
+
+    #{$self}__person {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
 
-    &__person__pic {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        border-radius: $br1;
+    @include scroll-x;
+  }
+
+  &__person {
+    height: 50px;
+    padding: 0 $padding2;
+
+    &__choice {
+      position: absolute;
+      right: 3px;
+      top: 20%;
+      background-color: white;
+      border-radius: 50%;
+      color: color(cpurple);
     }
+  }
+
+  &__person__pic {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: $br1;
+  }
 }
 
 .pool {
-    width: 100%;
-    position: absolute;
-    top: 56px;
-    bottom: 60px;
+  width: 100%;
+  position: absolute;
+  top: 56px;
+  bottom: 60px;
 
+  @include desktop {
+    bottom: 25px;
+  }
+
+  .profile__gallery__actions {
     @include desktop {
-        bottom: 25px;
+      display: flex;
     }
 
-    .profile__gallery__actions {
-        display: none;
-
-        @include desktop {
-            display: flex;
-        }
-    }
-
-    &__profile {
-        height: 100%;
-
-        &__gallery {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-
-            &__photo {
-                position: absolute;
-                width: 100%;
-                height: calc(100% - 119px);
-                border-radius: $br2;
-                object-fit: cover;
-
-                @include desktop {
-                    height: calc(100% - 78px);
-                }
-            }
-
-        }
-
-        &__info {
-            position: absolute;
-            bottom: 0;
-            width: 90%;
-            padding: $padding2;
-            left: 5%;
-            line-height: 1.6em;
-            border-radius: 0 0 $br2 $br2;
-            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-            
-            @include desktop {
-                display:  none;
-            }
-
-            &__details {
-                h2 {
-                    font-size: 1.4em;
-                    font-weight: bold;
-                }
-
-                p {
-                    margin-bottom: 5px;
-                }
-
-                &__add {
-                    float:right;
-                    font-size: 2em;
-                    color: color(corange);
-                }
-
-                &__more {
-                    display: block;
-                    text-align: center;
-                    padding-top: $padding2;
-                    border-top: 1px solid lightgray;
-
-                    @include desktop {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
+    text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    height: 50px;
-    width: 100%;
-    box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.1);
-    background: white;
-
-    @include desktop {
-        display: none;
-    }
-}
-
-.main--profile {
-    height: auto;
-    width: 100%;
-    background-color: $bg-gray;
-    left: 0;
-    position: relative;
-
-    @include phonemd {
-        margin-left: calc(-470px / 2);
-        left: 50%;
-        padding: 0;
-    }
-
-    @include desktop {
-        width: 300px;
-        top: 75px;
-        height: calc(100% - 95px);
-        margin-left: calc(-400px / 2);
-    }
-}
-
-.go-back {
     position: absolute;
-    left: 10px;
-    font-size: 2.5em;
-    color: white;
-    text-shadow: $textshadow
-    ;
-}
-
-.profile-wrap {
+    bottom: -30px;
     width: 100%;
 
-    .show-small {
-        @include desktop {
-            display: none;
-        }
+    @include desktop {
+      bottom: 5px;
     }
-}
 
-.profile {
-    position: relative;
-    padding: 0 $padding2;
+    &__prev,
+    &__next {
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      border-radius: $br2;
+      background-color: white;
+      color: lightgray;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
-    
+      &:hover {
+        color: color(cgray);
+      }
+    }
+
+    &__pass,
+    &__like {
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      border-radius: $br2;
+      font-size: 1.3em;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    &__pass {
+      background-color: color(corange);
+
+      &:hover {
+        color: color(cpurple);
+      }
+    }
+
+    &__like {
+      background-color: color(cpurple);
+
+      &:hover {
+        color: color(corange);
+      }
+    }
+  }
+
+  &__profile {
+    height: 100%;
 
     &__gallery {
-        margin-left: -5.5%;
-        margin-right: -5.5%;
-        height: 95vw;
-        max-height: 95vh;
-        position: relative;
-        margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+
+      &__photo {
+        position: absolute;
         width: 100%;
+        height: calc(100% - 119px);
+        border-radius: $br2;
+        object-fit: cover;
 
-        &__photo {
-            width: 111%;
-            height: 95vw;
-            max-height: 95vh;
-            object-fit: cover;
-            border-radius: 0 0 $br2 $br2;
-            box-shadow: $bottomshadow;
+        @include desktop {
+          height: calc(100% - 78px);
         }
-
-        &__actions {
-            text-align: center;
-            display:flex;
-            justify-content: space-evenly;
-            align-items: center;
-            position: absolute;
-            bottom: -30px;
-            width: 100%;
-
-            @include desktop {
-                bottom: 5px;
-            }
-
-            &__prev, &__next {
-                height: 40px;
-                width: 40px;
-                line-height: 40px;
-                border-radius: $br2;
-                background-color: white;
-                color: lightgray;
-                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-            }
-
-            &__pass, &__like {
-                height: 55px;
-                width: 55px;
-                line-height: 55px;
-                border-radius: $br2;
-                font-size: 1.3em;
-                box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-                color: white;
-            }
-
-            &__pass {
-                background-color: color(corange);
-
-                &:hover {
-                    color: color(cpurple)
-                }
-            }
-
-            &__like {
-                background-color: color(cpurple);
-
-                &:hover {
-                    color: color(corange)
-                }
-            }
-        }
+      }
     }
 
     &__info {
+      position: absolute;
+      bottom: 0;
+      width: 90%;
+      padding: $padding2;
+      left: 5%;
+      line-height: 1.6em;
+      border-radius: 0 0 $br2 $br2;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 
-        &__header {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: $padding2;
+      @include desktop {
+        display: none;
+      }
 
-            h1 {
-                font-size: 1.4em;
-            }
-
-            a {
-                font-size: 1.9em;
-            }
+      &__details {
+        h2 {
+          font-size: 1.4em;
+          font-weight: bold;
         }
 
-        &__label {
-            display: block;
-            margin-top: 15px;
-            color: rgb(190, 190, 190);
-            font-size: 0.9em;
+        p {
+          margin-bottom: 5px;
         }
 
-        &__content {
-            display: block;
-            margin: 5px 0;
+        &__add {
+          float: right;
+          font-size: 2em;
+          color: color(corange);
         }
+
+        &__more {
+          display: block;
+          text-align: center;
+          padding-top: $padding2;
+          border-top: 1px solid lightgray;
+
+          @include desktop {
+            display: none;
+          }
+        }
+      }
     }
-
-    &__communicate {
-        padding: $padding3 0;
-        margin: 15px 0;
-        align-items: center;
-        border-top: 1px solid rgb(248, 248, 248);
-        border-bottom: 1px solid rgb(248, 248, 248);
-        @include clearfix;
-
-        &__gift {
-            font-size: 5em;
-            margin-right: 30px;
-            float: left;
-            color: color(cpurple);
-        }
-
-        &__text {
-            padding-top: $padding3;
-            
-            h2 {
-                font-size: 1.1em;
-                margin-bottom: 5px;
-            }
-
-            p {
-                font-size: 0.9em;
-                color: gray;
-            }
-        }
-
-        a {
-            display: block;
-            width: 100%;
-            margin-top: 30px;
-            background-color: color(cpurple);
-            padding: $padding3;
-            text-align: center;
-            color: white;
-            border-radius: $br2;
-        }
-    }
-    
-    &__videos {
-        $self: &;
-        width: 100%;
-
-        &__title {
-            font-weight: bold;
-            @include clearfix;
-            padding: $padding1 0;
-
-            span {
-                font-weight: normal;
-                color: gray;
-                padding-left: $padding1;
-            }
-
-            #{$self}__more {
-                font-size: 0.9em;
-                float: right;
-            }
-        }
-
-        &__tape {
-            display: flex;
-            overflow-x: scroll;
-            @include scroll-x;
-            margin-bottom: 10px;
-
-            img {
-                display: inline-block;
-                cursor: pointer;
-                border-radius: $br1;
-                margin-left: $padding2;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-            }
-        }
-        
-    }
-
-    &__verified {
-        padding: $padding3 0;
-
-        h4 {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        &__card {
-            padding: $padding2;
-            @include clearfix;
-            border-radius: $br1;
-            box-shadow: $bottomshadow;
-            margin: 20px 0;
-
-            &__icon {
-                float: left;
-                font-size: 1.5em;
-            }
-
-            &__status {
-                font-size: 1em;
-                float: right;
-                width: 1.7em;
-                height: 1.7em;
-                text-align: center;
-                padding-top: 0.35em;
-                border-radius: $br1;
-                color: white;
-                background-color: color(cpurple);
-            }
-
-            &__text {
-                margin-left: 3em;
-
-                h5 {
-                    font-weight: bold;
-                    font-size: 0.9em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                    color: gray;
-                }
-            }
-
-            .fa-images {
-                color: color(corange);
-            }
-
-            .fa-facebook-square {
-                color: #3b5998;
-                font-size: 1.8em;
-            }
-
-            .fa-instagram {
-                display: inline-block;
-                vertical-align: middle;
-                font-size: 1.3em;
-                line-height: 1.6em;
-                width: 1.5em;
-                height: 1.5em;
-                text-align: center;
-                border-radius: 6px;
-                color: white;
-                background: #d6249f;
-                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-            }
-        }
-    }
-
-    &__top {
-        display: block;
-        margin-bottom: 60px;
-    }
+  }
 }
 
-.profile__info__header {
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.1);
+  background: white;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.main--profile {
+  height: auto;
+  width: 100%;
+  background-color: $bg-gray;
+  left: 0;
+  position: relative;
+
+  @include phonemd {
+    margin-left: calc(-470px / 2);
+    left: 50%;
     padding: 0;
+  }
 
-    h1 {
-        font-size: 100%;
-    }
+  @include desktop {
+    width: 300px;
+    top: 75px;
+    height: calc(100% - 95px);
+    margin-left: calc(-400px / 2);
+  }
 }
 
+.go-back {
+  position: absolute;
+  left: 10px;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: $textshadow;
+}
+
+.profile-wrap {
+  width: 100%;
+
+  .show-small {
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.profile {
+  position: relative;
+  padding: 0 $padding2;
+
+  &__gallery {
+    margin-left: -5.5%;
+    margin-right: -5.5%;
+    height: 95vw;
+    max-height: 95vh;
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+
+    &__photo {
+      width: 111%;
+      height: 95vw;
+      max-height: 95vh;
+      object-fit: cover;
+      border-radius: 0 0 $br2 $br2;
+      box-shadow: $bottomshadow;
+    }
+
+    &__actions--profile {
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: absolute;
+      bottom: -30px;
+      width: 100%;
+
+      @include desktop {
+        bottom: 5px;
+      }
+
+      &__prev,
+      &__next {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        border-radius: $br2;
+        background-color: white;
+        color: lightgray;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      &__pass,
+      &__like {
+        height: 55px;
+        width: 55px;
+        line-height: 55px;
+        border-radius: $br2;
+        font-size: 1.3em;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        color: white;
+      }
+
+      &__pass {
+        background-color: color(corange);
+
+        &:hover {
+          color: color(cpurple);
+        }
+      }
+
+      &__like {
+        background-color: color(cpurple);
+
+        &:hover {
+          color: color(corange);
+        }
+      }
+    }
+  }
+
+  &__info {
+    &__header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: $padding2;
+
+      h1 {
+        font-size: 1.4em;
+      }
+
+      &__link {
+        font-size: 1.9em;
+      }
+    }
+
+    &__label {
+      display: block;
+      margin-top: 15px;
+      color: rgb(190, 190, 190);
+      font-size: 0.9em;
+    }
+
+    &__content {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+
+  &__communicate {
+    padding: $padding3 0;
+    margin: 15px 0;
+    align-items: center;
+    border-top: 1px solid rgb(248, 248, 248);
+    border-bottom: 1px solid rgb(248, 248, 248);
+
+    @include clearfix;
+
+    &__gift {
+      font-size: 5em;
+      margin-right: 30px;
+      float: left;
+      color: color(cpurple);
+    }
+
+    &__text {
+      padding-top: $padding3;
+
+      h2 {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 0.9em;
+        color: gray;
+      }
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      background-color: color(cpurple);
+      padding: $padding3;
+      text-align: center;
+      color: white;
+      border-radius: $br2;
+    }
+  }
+
+  &__videos {
+
+    $self: &;
+
+    width: 100%;
+
+    &__title {
+      font-weight: bold;
+      padding: $padding1 0;
+
+      @include clearfix;
+
+      span {
+        font-weight: normal;
+        color: gray;
+        padding-left: $padding1;
+      }
+
+      #{$self}__more {
+        font-size: 0.9em;
+        float: right;
+      }
+    }
+
+    &__tape {
+      display: flex;
+      overflow-x: scroll;
+      margin-bottom: 10px;
+
+      @include scroll-x;
+
+      img {
+        display: inline-block;
+        cursor: pointer;
+        border-radius: $br1;
+        margin-left: $padding2;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__verified {
+    padding: $padding3 0;
+
+    h4 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    &__card {
+      padding: $padding2;
+      border-radius: $br1;
+      box-shadow: $bottomshadow;
+      margin: 20px 0;
+
+      @include clearfix;
+
+      &__icon {
+        float: left;
+        font-size: 1.5em;
+      }
+
+      &__status {
+        font-size: 1em;
+        float: right;
+        width: 1.7em;
+        height: 1.7em;
+        text-align: center;
+        padding-top: 0.35em;
+        border-radius: $br1;
+        color: white;
+        background-color: color(cpurple);
+      }
+
+      &__text {
+        margin-left: 3em;
+
+        h5 {
+          font-weight: bold;
+          font-size: 0.9em;
+        }
+
+        span {
+          font-size: 0.7em;
+          color: gray;
+        }
+      }
+
+      .fa-images {
+        color: color(corange);
+      }
+
+      .fa-facebook-square {
+        color: #3b5998;
+        font-size: 1.8em;
+      }
+
+      .fa-instagram {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.3em;
+        line-height: 1.6em;
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        border-radius: 6px;
+        color: white;
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+      }
+    }
+  }
+
+  &__top {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
 
 /************************
-    Chat list page
+  Chat list page
 */
 
 .main--chat-list {
-    width: 100%;
-    background-color: $bg-gray;
-    left: 0;
+  width: 100%;
+  background-color: $bg-gray;
+  left: 0;
 
-    @include phonemd {
-        margin-left: calc(-470px / 2);
-        left: 50%;
-    }
+  @include phonemd {
+    margin-left: calc(-470px / 2);
+    left: 50%;
+  }
 
-    @include desktop {
-        width: 300px;
-        top: 75px;
-        height: calc(100% - 95px);
-        margin-left: calc(-400px / 2);
-    }
+  @include desktop {
+    width: 300px;
+    top: 75px;
+    height: calc(100% - 95px);
+    margin-left: calc(-400px / 2);
+  }
 }
 
 .chat-list {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    overflow-y: scroll;
-    padding: 0 6%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  padding: 0 6%;
+
+  @include desktop {
+    padding: 0;
+  }
+
+  &__chat {
+    padding: $padding3;
+    border-radius: $br2;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
 
     @include desktop {
-        padding: 0;
+      margin: 0;
+      border-radius: 0;
     }
 
-    &__chat {
-        padding: $padding3;
-        border-radius: $br2;
-        height: 80px;
-        background-color: white;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-        margin: 15px 0;
-       
-        @include desktop {
-            margin: 0;
-            border-radius: 0;
-        }
-
-        &__photo {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: $br2;
-            float: left;
-            margin-right: 10px;
-        }
-        
-        &__time {
-            float: right;
-            display: block;
-            height: 50px;
-            margin-top: 5px;
-            font-size: 0.9em;
-        }
-
-        &__preview {
-            
-
-            h2 {
-                font-weight: bold;
-                margin: 5px 0;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-            }
-
-            &__message {
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-                color: gray;
-                font-size: 0.9em;
-            }
-        }
+    &__photo {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: $br2;
+      float: left;
+      margin-right: 10px;
     }
+
+    &__time {
+      float: right;
+      display: block;
+      height: 50px;
+      margin-top: 5px;
+      font-size: 0.9em;
+    }
+
+    &__preview {
+      h2 {
+        font-weight: bold;
+        margin: 5px 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &__message {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: gray;
+        font-size: 0.9em;
+      }
+    }
+  }
 }
 
 /************************
-    Chat window
+  Chat window
 */
 
 .main--chat {
-    width: 100%;
-    background-color: $bg-gray;
-    left: 0;
+  width: 100%;
+  background-color: $bg-gray;
+  left: 0;
+  position: fixed;
+  top: 50px;
+  height: calc(100% - 114px);
+  overflow-y: scroll;
 
-    @include phonemd {
-        margin-left: calc(-470px / 2);
-        left: 50%;
-    }
+  @include phonemd {
+    margin-left: calc(-470px / 2);
+    left: 50%;
+  }
 
-    @include desktop {
-        width: 300px;
-        top: 75px;
-        height: calc(100% - 95px);
-        margin-left: calc(-400px / 2);
-    }
+  @include desktop {
+    width: 300px;
+    top: 75px;
+    height: calc(100% - 95px);
+    margin-left: calc(-400px / 2);
+  }
 
-    background-color: $bg-gray;
+  &__actions {
     position: fixed;
     width: 100%;
-    top: 50px;
-    left: 0;
-    height: calc(100% - 114px);
-    overflow-y: scroll;
+    bottom: 0;
 
-    &__actions {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-
-        form {
-            padding: $padding3 25px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: white;
-        }
-
-        &__file {
-            input[type="file"]{
-                display: none;
-            }
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-
-        &__write {
-            position: relative;
-            width: calc(100% - 3em);
-            padding: 0 $padding2;
-
-            textarea {
-                width: 100%;
-                height: 2em;
-                line-height: 1.9em;
-                padding-left: $padding2;
-                outline: none;
-                border-radius: $br2;
-                border-color: lightgray;
-                resize: none;
-            }
-
-            i {
-                position: absolute;
-                right: $padding2 * 2;
-                top: 8px;
-                cursor: pointer;
-            }
-        }
-
-        &__send {
-            font-size: 1.1em;
-            cursor: pointer;
-            width: 2em;
-            height: 2em;
-            margin-top: -1px;
-            line-height: 2em;
-            text-align: center;
-            background-color: color(cpurple);
-            color: white;
-            border-radius: $br2;
-        }
+    form {
+      padding: $padding3 25px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
     }
+
+    &__file {
+      input[type="file"] {
+        display: none;
+      }
+
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    &__write {
+      position: relative;
+      width: calc(100% - 3em);
+      padding: 0 $padding2;
+
+      textarea {
+        width: 100%;
+        height: 2em;
+        line-height: 1.9em;
+        padding-left: $padding2;
+        outline: none;
+        border-radius: $br2;
+        border-color: lightgray;
+        resize: none;
+      }
+
+      &__icon {
+        position: absolute;
+        right: $padding2 * 2;
+        top: 8px;
+        cursor: pointer;
+      }
+    }
+
+    &__send {
+      font-size: 1.1em;
+      cursor: pointer;
+      width: 2em;
+      height: 2em;
+      margin-top: -1px;
+      line-height: 2em;
+      text-align: center;
+      background-color: color(cpurple);
+      color: white;
+      border-radius: $br2;
+    }
+  }
 }
 
 .chat-container {
-    position: absolute;
-    left: 50%;
-    top: 0;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 370px;
+  bottom: 20px;
+  margin-left: calc(300px / 2);
+  background-color: white;
+  border-left: 1px solid lightgray;
+
+  .main--chat__actions {
     width: 370px;
     bottom: 20px;
-    margin-left: calc(300px / 2);
-    background-color: white;
-    border-left: 1px solid lightgray;
-
-    .main--chat__actions {
-        width: 370px;
-        bottom: 20px;
-    }
+  }
 }
 
 .chat-wrap {
-    width: 100%;
+  width: 100%;
 }
 
 .chat {
-    @include desktop{
-        overflow-y: scroll;
+  @include desktop {
+    overflow-y: scroll;
     height: 100%;
+  }
+
+  &__message {
+    width: 100%;
+    padding: $padding2 6%;
+
+    @include clearfix;
+
+    &__bubble {
+      width: 80%;
+      font-size: 0.9em;
+
+      &__time {
+        color: gray;
+        font-size: 0.8em;
+        margin: 0 10px;
+      }
+
+      &--right {
+        float: right;
+        text-align: right;
+      }
+
+      &--left {
+        float: left;
+      }
+
+      &__text {
+        text-align: left;
+        padding: $padding2;
+        border-radius: $br1;
+        background-color: white;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        margin-bottom: 5px;
+      }
     }
-
-    &__message {
-        width: 100%;
-        padding: $padding2 6%;
-        @include clearfix()
-
-        &__bubble {
-            width: 80%;
-            font-size: 0.9em;
-
-            &__time {
-                color: gray;
-                font-size: 0.8em;
-                margin: 0 10px;
-            }
-
-            &--right {
-                float: right;
-                text-align: right;
-            }
-
-            &--left {
-                float: left;
-            }
-
-            &__text {
-                text-align: left;
-                padding: $padding2;
-                border-radius: $br1;
-                background-color: white;
-                box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-                margin-bottom: 5px;
-            }
-        }
-    }
+  }
 }
