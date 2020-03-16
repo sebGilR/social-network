@@ -60,13 +60,17 @@ body {
   }
 }
 
-main {
+.main-element {
   width: 90%;
   max-width: 470.7px;
   height: calc(100% - 55px);
   margin: 0 auto;
   position: absolute;
   left: 5%;
+}
+
+.hidden {
+  display: none;
 }
 
 .main {
@@ -830,12 +834,12 @@ a:hover {
   padding: 10px;
 }
 
-.profile__info__header h1 {
+.profile__info__header h2 {
   font-size: 1.4em;
 }
 
 @media screen and (min-width: 1024px) {
-  .profile__info__header h1 {
+  .profile__info__header h2 {
     font-size: 1.1em;
   }
 }
