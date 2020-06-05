@@ -16,7 +16,7 @@ Each of these pages should have versions for 2 different screen sizes:
 Follow the guidelines of the given design, including:
 
 - Colors
-- Typographies: font face (as Helvetica Neue is a paid font, you may use a similar one like Open Sans), size and weight.
+- Typographies: font face (as Helvetica Neue is a paid font, you may use a similar one like Open Sans), size, and weight.
 - Layout: composition and space between elements, for the 2 given screen sizes.
 
 Original design: [Here](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
@@ -48,8 +48,6 @@ Original design: [Here](https://www.behance.net/gallery/70285515/Swipex-This-app
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
