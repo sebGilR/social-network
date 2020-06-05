@@ -21,6 +21,10 @@ Follow the guidelines of the given design, including:
 
 Original design: [Here](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
 
+## Potential Features
+
+- Split application into modules to reduce code repetition. 
+
 ## Screenshot
 ![screenshot](assets/images/screenshot1.png)
 ![screenshot](assets/images/screenshot2.png)
